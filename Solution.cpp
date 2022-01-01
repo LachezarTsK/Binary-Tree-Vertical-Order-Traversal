@@ -22,8 +22,8 @@ struct TreeNode {
 
 class Solution {
 public:
-    const int MIN_TREE_NODE_VALUE = -100;
-    const int MAX_TREE_NODE_VALUE = 100;
+   
+    const int MAX_NUMBER_OF_TREE_NODES = 100;
 
     vector<vector<int>> verticalOrder(TreeNode* root) {
 
@@ -38,8 +38,8 @@ public:
         map_vertical_levels[0] = vector<int>();
         map_vertical_levels[0].push_back(root->val);
 
-        int minVertical = MAX_TREE_NODE_VALUE;
-        int maxVertical = MIN_TREE_NODE_VALUE;
+        int minVertical = MAX_NUMBER_OF_TREE_NODES;
+        int maxVertical = -MAX_NUMBER_OF_TREE_NODES;
 
         while (!queue.empty()) {
 
